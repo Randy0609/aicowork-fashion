@@ -1,0 +1,20 @@
+{
+  "id": "apparel",
+  "name": "服装",
+  "description": "上衣、裤装、裙装和外套等商品内容。",
+  "focus_fields": [
+    "版型",
+    "面料成分",
+    "颜色",
+    "尺码",
+    "穿着场景"
+  ],
+  "example": {
+    "category": "女装上衣",
+    "product_name": "云感针织短袖",
+    "material": "粘纤与锦纶混纺，具体比例待商家核对",
+    "target_customer": "关注通勤舒适度和简洁搭配的人群",
+    "selling_points": "圆领基础版型；袖口采用窄罗纹收边；可搭配半裙或直筒裤",
+    "tone": "克制专业"
+  }
+}

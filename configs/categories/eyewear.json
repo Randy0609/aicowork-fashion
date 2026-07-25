@@ -1,0 +1,20 @@
+{
+  "id": "eyewear",
+  "name": "眼镜",
+  "description": "镜框、太阳镜和眼镜配件等商品内容。",
+  "focus_fields": [
+    "框型",
+    "镜框材质",
+    "尺寸",
+    "重量",
+    "适配脸型"
+  ],
+  "example": {
+    "category": "光学镜框",
+    "product_name": "轻量方圆框",
+    "material": "镜框材质待商家补充",
+    "target_customer": "偏好简洁日常造型的人群",
+    "selling_points": "方圆轮廓；鼻托可调节；镜腿细节以实物为准",
+    "tone": "简洁有力"
+  }
+}

@@ -1,0 +1,27 @@
+services:
+  aicowork:
+    build:
+      context: .
+    ports:
+      - "8787:8787"
+    environment:
+      AICOWORK_PROVIDER: ${AICOWORK_PROVIDER:-demo}
+      AICOWORK_BASE_URL: ${AICOWORK_BASE_URL:-https://api.openai.com/v1}
+      AICOWORK_API_KEY: ${AICOWORK_API_KEY:-}
+      AICOWORK_MODEL: ${AICOWORK_MODEL:-}
+      AICOWORK_DATA_DIR: /app/runtime
+    volumes:
+      - aicowork-data:/app/runtime
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8787/api/health')"
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  aicowork-data:

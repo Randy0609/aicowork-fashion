@@ -1,0 +1,1 @@
+"""AiCowork applications."""

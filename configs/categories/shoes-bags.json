@@ -1,0 +1,20 @@
+{
+  "id": "shoes-bags",
+  "name": "鞋包",
+  "description": "鞋履、手袋、双肩包和小型皮具等商品内容。",
+  "focus_fields": [
+    "材质",
+    "尺寸",
+    "容量",
+    "闭合方式",
+    "使用场景"
+  ],
+  "example": {
+    "category": "通勤手提包",
+    "product_name": "简约托特包",
+    "material": "外层与内里材质待商家核对",
+    "target_customer": "需要日常通勤收纳的人群",
+    "selling_points": "顶部拉链闭合；设有独立内袋；具体尺寸与容量待补充",
+    "tone": "轻松自然"
+  }
+}

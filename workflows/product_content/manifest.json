@@ -1,0 +1,58 @@
+{
+  "id": "product-content",
+  "name": "商品内容生成",
+  "version": "0.1.0",
+  "status": "stable",
+  "description": "根据已核实的商品资料生成标题、卖点、社媒文案和短视频脚本。",
+  "handler": "workflows.product_content.handler:ProductContentWorkflow",
+  "input_fields": [
+    {
+      "id": "category",
+      "label": "品类",
+      "type": "category",
+      "required": true
+    },
+    {
+      "id": "product_name",
+      "label": "商品名称",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "material",
+      "label": "材质与工艺",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "target_customer",
+      "label": "目标顾客",
+      "type": "text",
+      "required": false
+    },
+    {
+      "id": "selling_points",
+      "label": "已核实卖点",
+      "type": "textarea",
+      "required": true
+    },
+    {
+      "id": "tone",
+      "label": "表达风格",
+      "type": "select",
+      "required": true,
+      "options": [
+        "克制专业",
+        "轻松自然",
+        "简洁有力"
+      ]
+    }
+  ],
+  "output_fields": [
+    "product_title",
+    "selling_points",
+    "social_post",
+    "short_video_script",
+    "review_notes"
+  ]
+}
