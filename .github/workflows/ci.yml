@@ -19,7 +19,7 @@ jobs:
           cache-dependency-path: apps/api/requirements-dev.txt
       - run: pip install -r apps/api/requirements-dev.txt
       - run: python scripts/verify_public_tree.py
-      - run: pytest -q
+      - run: python -m pytest -q
       - run: python scripts/e2e_model_smoke.py
       - run: python scripts/build_release.py --output /tmp/aicowork-fashion.zip
 
@@ -49,7 +49,7 @@ jobs:
           set -euo pipefail
           trap 'docker compose down --volumes' EXIT
           docker compose up --build --detach
-          curl --fail --retry 30 --retry-connrefused --retry-delay 1 \
+          curl --fail --retry 30 --retry-all-errors --retry-delay 1 \
             http://127.0.0.1:8787/api/health | grep '"status":"ok"'
-          curl --fail --retry 10 --retry-connrefused --retry-delay 1 \
+          curl --fail --retry 10 --retry-all-errors --retry-delay 1 \
             http://127.0.0.1:8787/ | grep 'AiCowork Fashion'

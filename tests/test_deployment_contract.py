@@ -38,3 +38,7 @@ def test_github_workflows_require_container_smoke() -> None:
     assert "container-smoke:" in ci
     assert "docker compose up --build --detach" in ci
     assert "docker compose up --build --detach" in release
+    assert "python -m pytest -q" in ci
+    assert "python -m pytest -q" in release
+    assert "--retry-all-errors" in ci
+    assert "--retry-all-errors" in release
